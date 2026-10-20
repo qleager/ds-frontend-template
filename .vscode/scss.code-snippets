@@ -63,6 +63,30 @@
     ],
     "description": "Spacing: choose a size from the spacing scale"
   },
+  "Radius": {
+    "scope": "css,scss",
+    "prefix": "radius",
+    "body": [
+      "var(--radius-${1|xs,sm,md,lg,xl,full|})$0"
+    ],
+    "description": "Border radius: choose a size from the radius scale"
+  },
+  "Shadow": {
+    "scope": "css,scss",
+    "prefix": "shadow",
+    "body": [
+      "var(--shadow-${1|sm,md,lg|})$0"
+    ],
+    "description": "Shadow: choose a size from the shadow scale"
+  },
+  "Duration": {
+    "scope": "css,scss",
+    "prefix": "duration",
+    "body": [
+      "var(--duration-${1|fast,normal|})$0"
+    ],
+    "description": "Transition duration: choose a speed"
+  },
   "Text mixin": {
     "scope": "scss",
     "prefix": "text",
