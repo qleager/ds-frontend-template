@@ -1,0 +1,65 @@
+@use 'sass:map';
+
+$font-family: 'Manrope', sans-serif;
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+);
+
+$font-sizes: (
+  2xs: 10px,
+  xs: 12px,
+  sm: 14px,
+  md: 16px,
+  lg: 18px,
+  xl: 20px,
+  2xl: 24px,
+  3xl: 28px,
+  4xl: 34px,
+  5xl: 40px,
+  6xl: 48px,
+  7xl: 56px,
+  8xl: 64px,
+);
+
+$line-heights: (
+  2xs: normal,
+  xs: normal,
+  sm: normal,
+  md: normal,
+  lg: normal,
+  xl: normal,
+  2xl: normal,
+  3xl: normal,
+  4xl: normal,
+  5xl: normal,
+  6xl: normal,
+  7xl: normal,
+  8xl: normal,
+);
+
+@mixin _text-style(
+  $size,
+  $weight,
+  $line-height: normal,
+  $letter-spacing: normal
+) {
+  font-family: $font-family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text($weight-name, $size-name) {
+  $weight: map.get($font-weights, $weight-name);
+  $size: map.get($font-sizes, $size-name);
+  $line-height: map.get($line-heights, $size-name);
+
+  @include _text-style($size, $weight, $line-height, normal);
+}

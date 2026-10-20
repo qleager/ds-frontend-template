@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '../colors/ui' as *;
+@use '../colors/palette' as *;
+
+$light: (
+  primary: map.get($ui, 'primary', 500),
+  secondary: map.get($ui, 'secondary', 500),
+  success: map.get($ui, 'success', 500),
+  info: map.get($ui, 'info', 500),
+  warning: map.get($ui, 'warning', 500),
+  error: map.get($ui, 'error', 500),
+
+  text-dimmed: map.get($ui, 'neutral', 400),
+  text-muted: map.get($ui, 'neutral', 500),
+  text-toned: map.get($ui, 'neutral', 600),
+  text: map.get($ui, 'neutral', 700),
+  text-highlighted: map.get($ui, 'neutral', 900),
+  text-inverted: map.get($palette, 'white'),
+
+  bg: map.get($palette, 'white'),
+  bg-muted: map.get($ui, 'neutral', 50),
+  bg-elevated: map.get($ui, 'neutral', 100),
+  bg-accented: map.get($ui, 'neutral', 200),
+  bg-inverted: map.get($ui, 'neutral', 900),
+
+  border: map.get($ui, 'neutral', 200),
+  border-muted: map.get($ui, 'neutral', 200),
+  border-accented: map.get($ui, 'neutral', 300),
+  border-inverted: map.get($ui, 'neutral', 900),
+);

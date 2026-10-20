@@ -1,0 +1,48 @@
+@use 'design-system' as *;
+@use 'design-system/variables';
+
+*,
+*::before,
+*::after { 
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  @include text(regular, md);
+}
+
+h1 {
+  @include text(bold, 8xl);
+}
+
+h2 {
+  @include text(bold, 7xl);
+}
+
+h3 {
+  @include text(bold, 6xl);
+}
+
+h4 {
+  @include text(bold, 5xl);
+}
+
+h5 {
+  @include text(bold, 4xl);
+}
+
+h6 {
+  @include text(bold, 3xl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

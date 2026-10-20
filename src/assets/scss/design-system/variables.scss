@@ -1,0 +1,51 @@
+@use 'sass:meta';
+@use 'index' as ds;
+@use 'themes';
+
+:root {
+  @each $source, $colors in ds.$colors {
+    $prefix: '';
+    
+    @if $source == 'ui' {
+      $prefix: 'ui-color';
+    }
+
+    @if $source == 'palette' {
+      $prefix: 'palette-color';
+    }
+
+    @each $name, $shades in $colors {
+      @if meta.type-of($shades) == 'map' {
+        @each $shade, $value in $shades {
+          --#{$prefix}-#{$name}-#{$shade}: #{$value};
+        }
+      } @else {
+        --#{$prefix}-#{$name}: #{$shades};
+      }
+    }
+  }
+
+  @each $key, $value in ds.$spaces {
+    --space-#{$key}: #{$value};
+  }
+
+  @each $key, $value in ds.$radius {
+    --radius-#{$key}: #{$value};
+  }
+
+  @each $key, $value in ds.$shadows {
+    --shadow-#{$key}: #{$value};
+  }
+
+  @each $key, $value in ds.$durations {
+    --duration-#{$key}: #{$value};
+  }
+}
+
+@each $theme, $tokens in themes.$themes {
+  [data-theme='#{$theme}'] {
+    @each $name, $value in $tokens {
+      --ui-#{$name}: #{$value};
+    }
+  }
+}

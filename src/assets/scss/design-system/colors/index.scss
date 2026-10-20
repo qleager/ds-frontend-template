@@ -1,0 +1,7 @@
+@use 'palette' as *;
+@use 'ui' as *;
+
+$colors: (
+  'ui': $ui,
+  'palette': $palette,
+);

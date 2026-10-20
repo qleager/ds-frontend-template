@@ -1,0 +1,74 @@
+{
+  "Palette color": {
+    "scope": "css,scss",
+    "prefix": "palette-color",
+    "body": [
+      "var(--palette-color-${1|red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose,slate,gray,zinc,neutral,stone,mauve,olive,mist,taupe|}-${2|50,100,200,300,400,500,600,700,800,900,950|})$0"
+    ],
+    "description": "Palette color: choose a color and shade"
+  },
+  "Palette black or white": {
+    "scope": "css,scss",
+    "prefix": "palette-base-color",
+    "body": [
+      "var(--palette-color-${1|black,white|})$0"
+    ],
+    "description": "Black or white palette color"
+  },
+  "UI color shade": {
+    "scope": "css,scss",
+    "prefix": "ui-color",
+    "body": [
+      "var(--ui-color-${1|primary,secondary,success,info,warning,error,neutral|}-${2|50,100,200,300,400,500,600,700,800,900,950|})$0"
+    ],
+    "description": "UI color: choose a role and shade"
+  },
+  "UI theme bg": {
+    "scope": "css,scss",
+    "prefix": "ui-bg-color",
+    "body": [
+      "var(--ui-${1|bg,bg-muted,bg-elevated,bg-accented,bg-inverted|})$0"
+    ],
+    "description": "Background color for the current theme"
+  },
+  "UI theme text": {
+    "scope": "css,scss",
+    "prefix": "ui-text-color",
+    "body": [
+      "var(--ui-${1|text-dimmed,text-muted,text-toned,text,text-highlighted,text-inverted|})$0"
+    ],
+    "description": "Text color for the current theme"
+  },
+  "UI theme border": {
+    "scope": "css,scss",
+    "prefix": "ui-border-color",
+    "body": [
+      "var(--ui-${1|border,border-muted,border-accented,border-inverted|})$0"
+    ],
+    "description": "Border color for the current theme"
+  },
+  "UI theme status": {
+    "scope": "css,scss",
+    "prefix": "ui-status-color",
+    "body": [
+      "var(--ui-${1|primary,secondary,success,info,warning,error|})$0"
+    ],
+    "description": "Status color for the current theme"
+  },
+  "Spacing": {
+    "scope": "css,scss",
+    "prefix": "space",
+    "body": [
+      "var(--space-${1|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,30|})$0"
+    ],
+    "description": "Spacing: choose a size from the spacing scale"
+  },
+  "Text mixin": {
+    "scope": "scss",
+    "prefix": "text",
+    "body": [
+      "@include text('${1|light,regular,medium,semibold,bold,extrabold|}', ${2|2xs,xs,sm,md,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl|});$0"
+    ],
+    "description": "Text mixin: choose a font weight and size"
+  }
+}
